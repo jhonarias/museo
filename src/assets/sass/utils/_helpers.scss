@@ -1,0 +1,15 @@
+// + Overlay
+// -------
+.ui-overlay {
+	@include overlay-style();
+}
+
+.no-border-radius {
+	border-radius: 0 !important;
+}
+
+.emphasized { font-style: italic; }
+
+.text-center {
+	text-align: center;
+}
