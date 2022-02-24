@@ -280,7 +280,7 @@ $header-height: 72px;
 	display: flex;
 	flex-wrap: wrap;
 	overflow-y: auto;
-	height: calc(100vh - #{$header-height + 14px});
+	height: calc(100vh - #{$header-height + 24px});
 	padding: 0 calculateRem(14px) calculateRem(14px) calculateRem(14px);
 	box-sizing: border-box;
 }
