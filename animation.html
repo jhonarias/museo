@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site Description">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="./src/assets/imgs/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/assets/imgs/favicon/favicon-16x16.png"> -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Generator fonts -->
+    <!-- https://blogfonts.com/helvetica-neue-lt-std-1.font -->
+
+    <link rel="stylesheet" href="./dist/styles.css">
+    <!-- <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&amp;subset=latin-ext&amp;display=swap"
+        rel="stylesheet"> -->
+
+    <title>Artsanco</title>
+</head>
+
+<body class="home-page">
+    <div class="page-wrap">
+        <div class="animation-load-page animation-load-page--waiting" id="animation-load-page">
+          <header class="header">
+              <ul>
+                  <li>
+                    <h1 class="header-logo">
+                        <span class="header-page_title">ARTSANCO</span>
+                        <img src="./src/assets/imgs/logo.svg" alt="ARTSANCO">
+                    </h1>
+                  </li>
+              </ul>
+          </header>
+          <div class="content-page">
+            <div class="content-page_background" style="background-image: url('./src/assets/imgs/Maja_desnuda_(museo_del_Prado).png');background-position-x: center;"></div>
+              <div class="content-page_container">
+                  <div class="content-page_inner content-page_inner--alignVCenter">
+                    <p><strong class="emphasized">La maja desnuda</strong><br>
+                      Francisco de Goya<br>
+                      Óleo sobre lienzo<br>
+                      98cm x 191cm <br>1800 y Siglo XVIII</p>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    <script>
+      var element = document.getElementById("animation-load-page");
+      const timeOutLoadPageEnding = setTimeout(animationLoadPageEnding, 3000);
+      function animationLoadPageEnding() {
+        element.classList.remove("animation-load-page--waiting");
+        element.classList.add('animation-load-page--ending');
+        clearTimeout(timeOutLoadPageEnding);
+      }
+
+      const myTimeoutLoadPageFinished = setTimeout(animationLoadPageFinished, 4000);
+      function animationLoadPageFinished() {
+        element.classList.add('animation-load-page--finished');
+        clearTimeout(myTimeoutLoadPageFinished);
+      }
+    </script>
+</body>
+</html>
