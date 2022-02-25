@@ -49,14 +49,14 @@
     </div>
     <script>
       var element = document.getElementById("animation-load-page");
-      const timeOutLoadPageEnding = setTimeout(animationLoadPageEnding, 3000);
+      const timeOutLoadPageEnding = setTimeout(animationLoadPageEnding, 10000);
       function animationLoadPageEnding() {
         element.classList.remove("animation-load-page--waiting");
         element.classList.add('animation-load-page--ending');
         clearTimeout(timeOutLoadPageEnding);
       }
 
-      const myTimeoutLoadPageFinished = setTimeout(animationLoadPageFinished, 4000);
+      const myTimeoutLoadPageFinished = setTimeout(animationLoadPageFinished, 11000);
       function animationLoadPageFinished() {
         element.classList.add('animation-load-page--finished');
         clearTimeout(myTimeoutLoadPageFinished);
