@@ -295,6 +295,22 @@ button {
   100% {
     transform: translateX(0); } }
 
+@keyframes slideInFromLeftToCenter {
+  0% {
+    left: 0;
+    transform: translateX(0); }
+  100% {
+    left: 50%;
+    transform: translateX(-50%); } }
+
+@keyframes slideInFromCenterToLeft {
+  0% {
+    left: 50%;
+    transform: translateX(-50%); }
+  100% {
+    left: 0;
+    transform: translateX(0); } }
+
 @keyframes temblor {
   0% {
     transform: translate(0px, 0px); }
@@ -527,7 +543,9 @@ input {
   top: 90%; }
 
 .header--opened .header > ul > li > a {
-  text-align: center; }
+  left: 50%;
+  transform: translateX(-50%);
+  animation: .5s ease-out 0s 1 slideInFromLeftToCenter; }
 
 .header--opened .ui-overlay {
   opacity: 1;
@@ -543,9 +561,12 @@ input {
   width: 100%; }
   .header > ul > li {
     position: relative; }
-    .header > ul > li > a img {
-      height: 3.125rem;
-      object-fit: contain; }
+    .header > ul > li > a {
+      display: inline-block;
+      position: relative;
+      width: 12.5rem; }
+      .header > ul > li > a img {
+        height: 3.125rem; }
 
 .header-submenu {
   left: 0;
@@ -569,7 +590,7 @@ input {
   padding: 0 0.875rem;
   line-height: 1; }
   .header-logo img {
-    width: 12.5rem;
+    max-width: 100%;
     height: 4.5rem;
     object-fit: contain; }
 
