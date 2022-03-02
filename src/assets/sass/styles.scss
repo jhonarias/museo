@@ -307,6 +307,15 @@ $header-height: 72px;
 		z-index: 1;
 	}
 }
+.header--closed {
+	.header {
+		> ul > li {
+			& > a {
+				animation: slideInFromCenterToLeft 0.5s forwards;
+			}
+		}
+	}
+}
 .header {
 	position: fixed;
 	left: 0;
@@ -320,8 +329,7 @@ $header-height: 72px;
 		& > a {
 			display: inline-block;
 			position: relative;
-			width: calculateRem(200px);
-			// animation: slideInFromCenterToLeft 0.5s forwards;
+			width: calculateRem(200px);		
 			img {				
 				height: calculateRem(50px);
 			}

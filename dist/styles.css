@@ -551,6 +551,9 @@ input {
   opacity: 1;
   z-index: 1; }
 
+.header--closed .header > ul > li > a {
+  animation: slideInFromCenterToLeft 0.5s forwards; }
+
 .header {
   position: fixed;
   left: 0;

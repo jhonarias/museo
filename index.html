@@ -393,9 +393,11 @@
       if ( body.classList.contains( 'header--opened' ) )
       {
         body.classList.remove( "header--opened" );
+        body.classList.add( "header--closed" );
       } else
       {
         body.classList.add( "header--opened" );
+        body.classList.remove( "header--closed" );
       }
     }
 
