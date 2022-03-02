@@ -2,315 +2,419 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site Description">
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="./src/assets/imgs/favicon/apple-touch-icon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site Description">
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="./src/assets/imgs/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/imgs/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./src/assets/imgs/favicon/favicon-16x16.png"> -->
-    <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
 
-    <!-- Generator fonts -->
-    <!-- https://blogfonts.com/helvetica-neue-lt-std-1.font -->
+  <!-- Generator fonts -->
+  <!-- https://blogfonts.com/helvetica-neue-lt-std-1.font -->
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-    <link rel="stylesheet" href="./dist/styles.css">
-    <!-- <link
+  <link rel="stylesheet" href="./dist/styles.css">
+  <!-- <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&amp;subset=latin-ext&amp;display=swap"
         rel="stylesheet"> -->
 
-    <title>Artsanco</title>
+  <title>Artsanco</title>
 </head>
 
 <body class="home-page">
-    <div class="page-wrap">
-        <header class="header">
-            <ul>
-                <li>
-                    <h1 class="header-logo">
-                        <span class="header-page_title">ARTSANCO</span>
-                        <img src="./src/assets/imgs/logo.svg" alt="ARTSANCO">
-                    </h1>
-                </li>
-            </ul>
-        </header>
-        <!-- Swiper -->
-        <div class="swiper-container mySwiperVertical">
+  <div class="page-wrap">
+    <header class="header">
+      <ul>
+        <li id="openMenu">
+          <a href="javascript:void(0)" onclick="openMenu();">
+            <h1 class="header-logo">
+              <span class="header-page_title">ARTSANCO</span>
+              <img src="./src/assets/imgs/logo.svg" alt="ARTSANCO">
+            </h1>
+          </a>
+          <ul class="header-submenu">
+            <li>
+              <a href="javascript:void(0)" class="header-submenu_link active" id="header-submenu_link0"
+                onclick="goToRoom(0)">Sala 1</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="header-submenu_link" id="header-submenu_link1"
+                onclick="goToRoom(1)">Sala 2</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="header-submenu_link" id="header-submenu_link2"
+                onclick="goToRoom(2)">Sala 3</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="header-submenu_link" id="header-submenu_link3"
+                onclick="goToRoom(3)">Sala 4</a>
+            </li>
+          </ul>
+        </li>
+        <li class="header--call-overlay"></li>
+      </ul>
+    </header>
+    <!-- Swiper -->
+    <div class="swiper-container mySwiperVertical">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="swiper-container mySwiperHorizontal">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="swiper-container mySwiperHorizontal">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="container container--background" style="background-image: url('./src/assets/imgs/Witches_Flight_Goya.png');">
-                                    <div class="cover-page">
-                                        <div class="cover-page_caption">
-                                            <h3 class="cover-page_caption_subtitle">EXHIBICIÓN LIMITADA</h3>
-                                            <h2 class="cover-page_caption_title">GOYA</h2>
-                                            <span class="cover-page_caption_description">Su obra, su legado</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Es necesario esta clase swiper-slide--animation para la animación de la imagen -->
-                            <div class="swiper-slide swiper-slide--animation">
-                                <!--<div class="image_container image_container--vc-img-original">
+              <div class="swiper-slide">
+                <div class="container container--background"
+                  style="background-image: url('./src/assets/imgs/Witches_Flight_Goya.png');">
+                  <div class="cover-page">
+                    <div class="cover-page_caption">
+                      <h3 class="cover-page_caption_subtitle">EXHIBICIÓN LIMITADA</h3>
+                      <h2 class="cover-page_caption_title">GOYA</h2>
+                      <span class="cover-page_caption_description">Su obra, su legado</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Es necesario esta clase swiper-slide--animation para la animación de la imagen -->
+              <div class="swiper-slide swiper-slide--animation">
+                <!--<div class="image_container image_container--vc-img-original">
                                     <img src="./src/assets/imgs/Maja_desnuda_(museo_del_Prado).png" alt="" class="image">
                                 </div>-->
-                                
-                                <div class="background_wrapper background_wrapper1" id="background_wrapper1">
-                                    <div class="background_inner">
-                                        <div class="container container--background"
-                                            id="doBackgroundFull1"
-                                            onclick="doBackgroundFull('1')"
-                                            style="background-image: url('./src/assets/imgs/Maja_desnuda_(museo_del_Prado).png');">
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="content-page content-page1" id="content-page1" style="display: none;">
-                                    <div class="content-page_background content-page_background--overlay content-page_background--animation" style="background-image: url('./src/assets/imgs/Maja_desnuda_(museo_del_Prado).png');background-position-x: center;"></div>
-                                    <div class="content-page_container">
-                                        <div class="content-page_inner content-page_inner--alignVCenter">
-                                          <p><strong class="emphasized">La maja desnuda</strong><br>
-                                            Francisco de Goya<br>
-                                            Óleo sobre lienzo<br>
-                                            98cm x 191cm <br>1800 y Siglo XVIII</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="swiper-slide">
+                <div class="background_wrapper background_wrapper1" id="background_wrapper1">
+                  <div class="background_inner">
+                    <div class="container container--background" id="doBackgroundFull1" onclick="doBackgroundFull('1')"
+                      style="background-image: url('./src/assets/imgs/Maja_desnuda_(museo_del_Prado).png');">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="content-page content-page1" id="content-page1" style="display: none;">
+                  <div
+                    class="content-page_background content-page_background--overlay content-page_background--animation"
+                    style="background-image: url('./src/assets/imgs/Maja_desnuda_(museo_del_Prado).png');background-position-x: center;">
+                  </div>
+                  <div class="content-page_container">
+                    <div class="content-page_inner content-page_inner--alignVCenter">
+                      <p><strong class="emphasized">La maja desnuda</strong><br>
+                        Francisco de Goya<br>
+                        Óleo sobre lienzo<br>
+                        98cm x 191cm <br>1800 y Siglo XVIII</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="swiper-slide">
                                 <div class="container container--background" style="background-image: url('./src/assets/imgs/Maja_desnuda_(museo_del_Prado).png');background-position: 70% center;"></div>
                             </div> -->
-                            <div class="swiper-slide">
-                                <div class="content-page">
-                                    <div class="content-page_container">
-                                        <div class="content-page_inner">  
-                                            <h2 class="heading-title">GOYA<br> Su obra, su<br> legado</h2>
-                                            <p>fue un pintor y grabador español. Su obra abarca la pintura de caballete y mural, el grabado y el dibujo. Su estilo evolucionó desde el rococó, pasando por el neoclasicismo, hasta el prerromanticismo, siempre interpretados de una forma personal y original,​ y siempre con un rasgo subyacente de naturalismo, del reflejo de la realidad sin una visión idealista que la edulcore ni desvirtúe, donde es igualmente importante el mensaje ético. Para Goya la pintura es un vehículo de instrucción moral, no un simple objeto estético.​ Sus referentes más contemporáneos fueron Giambattista Tiepolo y Anton Raphael Mengs, aunque también recibió la influencia de Diego Velázquez y Rembrandt.​ </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="swiper-pagination swiper-pagination--horizontal"></div> -->
+              <div class="swiper-slide">
+                <div class="content-page">
+                  <div class="content-page_container">
+                    <div class="content-page_inner">
+                      <h2 class="heading-title">GOYA<br> Su obra, su<br> legado</h2>
+                      <p>fue un pintor y grabador español. Su obra abarca la pintura de caballete y mural, el grabado y
+                        el dibujo. Su estilo evolucionó desde el rococó, pasando por el neoclasicismo, hasta el
+                        prerromanticismo, siempre interpretados de una forma personal y original,​ y siempre con un
+                        rasgo subyacente de naturalismo, del reflejo de la realidad sin una visión idealista que la
+                        edulcore ni desvirtúe, donde es igualmente importante el mensaje ético. Para Goya la pintura es
+                        un vehículo de instrucción moral, no un simple objeto estético.​ Sus referentes más
+                        contemporáneos fueron Giambattista Tiepolo y Anton Raphael Mengs, aunque también recibió la
+                        influencia de Diego Velázquez y Rembrandt.​ </p>
                     </div>
+                  </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="swiper-container mySwiperHorizontal">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="container container--background" style="background-image: url('./src/assets/imgs/mariohernandezprada.png');">
-                                    <div class="cover-page">
-                                        <div class="cover-page_caption">
-                                            <h3 class="cover-page_caption_subtitle">COLECCIÓN RESERVADA</h3>
-                                            <h2 class="cover-page_caption_title">ARTE DE SANTANDER</h2>
-                                            <span class="cover-page_caption_description">Grandes y nuevos maestros</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide--animation">
-                                
-                                <div class="background_wrapper background_wrapper2" id="background_wrapper2">
-                                    <div class="background_inner">
-                                        <div class="container container--background"
-                                            id="doBackgroundFull2"
-                                            onclick="doBackgroundFull('2')"
-                                            style="background-image: url('./src/assets/imgs/mariohernandezprada.png');">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="content-page content-page2" id="content-page2" style="display: none;">
-                                    <div class="content-page_background content-page_background--overlay content-page_background--animation"
-                                        style="background-image: url('./src/assets/imgs/mariohernandezprada.png');background-position-x: center;">
-                                    </div>
-                                    <div class="content-page_container">
-                                        <div class="content-page_inner content-page_inner--alignVCenter">
-                                          <p><strong class="emphasized">La maja desnuda</strong><br>
-                                            Francisco de Goya<br>
-                                            Óleo sobre lienzo<br>
-                                            98cm x 191cm <br>1800 y Siglo XVIII</p>
-                                        </div>
-                                    </div>
-                                </div>
-                               
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="content-page">
-                                    <div class="content-page_container">
-                                        <div class="content-page_inner">  
-                                            <h2 class="heading-title">ARTE DE SANTANDER<br> Su obra, su<br> legado</h2>
-                                            <p>fue un pintor y grabador español. Su obra abarca la pintura de caballete y mural, el grabado y el dibujo. Su estilo evolucionó desde el rococó, pasando por el neoclasicismo, hasta el prerromanticismo, siempre interpretados de una forma personal y original,​ y siempre con un rasgo subyacente de naturalismo, del reflejo de la realidad sin una visión idealista que la edulcore ni desvirtúe, donde es igualmente importante el mensaje ético. Para Goya la pintura es un vehículo de instrucción moral, no un simple objeto estético.​ Sus referentes más contemporáneos fueron Giambattista Tiepolo y Anton Raphael Mengs, aunque también recibió la influencia de Diego Velázquez y Rembrandt.​ </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="swiper-pagination swiper-pagination--horizontal"></div> -->
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="swiper-container mySwiperHorizontal">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="container container--background" style="background-image: url('./src/assets/imgs/mirror_room_26.png');">
-                                    <div class="cover-page">
-                                        <div class="cover-page_caption">
-                                            <h3 class="cover-page_caption_subtitle">COLECCIÓN RESERVADA</h3>
-                                            <h2 class="cover-page_caption_title">ARTE DE SANTANDER</h2>
-                                            <span class="cover-page_caption_description">Grandes y nuevos maestros</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide--animation">
-                                <div class="background_wrapper background_wrapper3" id="background_wrapper3">
-                                    <div class="background_inner">
-                                        <div class="container container--background"
-                                            id="doBackgroundFull3"
-                                            onclick="doBackgroundFull('3')"
-                                            style="background-image: url('./src/assets/imgs/mirror_room_26.png');">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="content-page content-page3" id="content-page3" style="display: none;">
-                                    <div class="content-page_background content-page_background--overlay content-page_background--animation"
-                                        style="background-image: url('./src/assets/imgs/mirror_room_26.png');background-position-x: center;">
-                                    </div>
-                                    <div class="content-page_container">
-                                        <div class="content-page_inner content-page_inner--alignVCenter">
-                                          <p><strong class="emphasized">La maja desnuda</strong><br>
-                                            Francisco de Goya<br>
-                                            Óleo sobre lienzo<br>
-                                            98cm x 191cm <br>1800 y Siglo XVIII</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="content-page">
-                                    <div class="content-page_container">
-                                        <div class="content-page_inner">  
-                                            <h2 class="heading-title">ARTE DE SANTANDER<br> Su obra, su<br> legado</h2>
-                                            <p>fue un pintor y grabador español. Su obra abarca la pintura de caballete y mural, el grabado y el dibujo. Su estilo evolucionó desde el rococó, pasando por el neoclasicismo, hasta el prerromanticismo, siempre interpretados de una forma personal y original,​ y siempre con un rasgo subyacente de naturalismo, del reflejo de la realidad sin una visión idealista que la edulcore ni desvirtúe, donde es igualmente importante el mensaje ético. Para Goya la pintura es un vehículo de instrucción moral, no un simple objeto estético.​ Sus referentes más contemporáneos fueron Giambattista Tiepolo y Anton Raphael Mengs, aunque también recibió la influencia de Diego Velázquez y Rembrandt.​ </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="swiper-pagination swiper-pagination--horizontal"></div> -->
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="swiper-container mySwiperHorizontal">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="container container--background" style="background-image: url('./src/assets/imgs/Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).png');">
-                                    <div class="cover-page">
-                                        <div class="cover-page_caption">
-                                            <h3 class="cover-page_caption_subtitle">COLECCIÓN RESERVADA</h3>
-                                            <h2 class="cover-page_caption_title">ARTE DE SANTANDER</h2>
-                                            <span class="cover-page_caption_description">Grandes y nuevos maestros</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide--animation">
-
-                                <div class="background_wrapper background_wrapper4" id="background_wrapper4">
-                                    <div class="background_inner">
-                                        <div class="container container--background"
-                                            id="doBackgroundFull4"
-                                            onclick="doBackgroundFull('4')"
-                                            style="background-image: url('./src/assets/imgs/Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).png');">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="content-page content-page4" id="content-page4" style="display: none;">
-                                    <div class="content-page_background content-page_background--overlay content-page_background--animation"
-                                        style="background-image: url('./src/assets/imgs/Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).png');background-position-x: center;">
-                                    </div>
-                                    <div class="content-page_container">
-                                        <div class="content-page_inner content-page_inner--alignVCenter">
-                                          <p><strong class="emphasized">La maja desnuda</strong><br>
-                                            Francisco de Goya<br>
-                                            Óleo sobre lienzo<br>
-                                            98cm x 191cm <br>1800 y Siglo XVIII</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="content-page">
-                                    <div class="content-page_container">
-                                        <div class="content-page_inner">  
-                                            <h2 class="heading-title">ARTE DE SANTANDER<br> Su obra, su<br> legado</h2>
-                                            <p>fue un pintor y grabador español. Su obra abarca la pintura de caballete y mural, el grabado y el dibujo. Su estilo evolucionó desde el rococó, pasando por el neoclasicismo, hasta el prerromanticismo, siempre interpretados de una forma personal y original,​ y siempre con un rasgo subyacente de naturalismo, del reflejo de la realidad sin una visión idealista que la edulcore ni desvirtúe, donde es igualmente importante el mensaje ético. Para Goya la pintura es un vehículo de instrucción moral, no un simple objeto estético.​ Sus referentes más contemporáneos fueron Giambattista Tiepolo y Anton Raphael Mengs, aunque también recibió la influencia de Diego Velázquez y Rembrandt.​ </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="swiper-pagination swiper-pagination--horizontal"></div> -->
-                    </div>
-                </div>
+              </div>
             </div>
-            <!-- <div class="swiper-pagination swiper-pagination--vertical"></div> -->
+            <!-- <div class="swiper-pagination swiper-pagination--horizontal"></div> -->
+          </div>
         </div>
+        <div class="swiper-slide">
+          <div class="swiper-container mySwiperHorizontal">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="container container--background"
+                  style="background-image: url('./src/assets/imgs/mariohernandezprada.png');">
+                  <div class="cover-page">
+                    <div class="cover-page_caption">
+                      <h3 class="cover-page_caption_subtitle">COLECCIÓN RESERVADA</h3>
+                      <h2 class="cover-page_caption_title">ARTE DE SANTANDER</h2>
+                      <span class="cover-page_caption_description">Grandes y nuevos maestros</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide--animation">
+
+                <div class="background_wrapper background_wrapper2" id="background_wrapper2">
+                  <div class="background_inner">
+                    <div class="container container--background" id="doBackgroundFull2" onclick="doBackgroundFull('2')"
+                      style="background-image: url('./src/assets/imgs/mariohernandezprada.png');">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="content-page content-page2" id="content-page2" style="display: none;">
+                  <div
+                    class="content-page_background content-page_background--overlay content-page_background--animation"
+                    style="background-image: url('./src/assets/imgs/mariohernandezprada.png');background-position-x: center;">
+                  </div>
+                  <div class="content-page_container">
+                    <div class="content-page_inner content-page_inner--alignVCenter">
+                      <p><strong class="emphasized">La maja desnuda</strong><br>
+                        Francisco de Goya<br>
+                        Óleo sobre lienzo<br>
+                        98cm x 191cm <br>1800 y Siglo XVIII</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="swiper-slide">
+                <div class="content-page">
+                  <div class="content-page_container">
+                    <div class="content-page_inner">
+                      <h2 class="heading-title">ARTE DE SANTANDER<br> Su obra, su<br> legado</h2>
+                      <p>fue un pintor y grabador español. Su obra abarca la pintura de caballete y mural, el grabado y
+                        el dibujo. Su estilo evolucionó desde el rococó, pasando por el neoclasicismo, hasta el
+                        prerromanticismo, siempre interpretados de una forma personal y original,​ y siempre con un
+                        rasgo subyacente de naturalismo, del reflejo de la realidad sin una visión idealista que la
+                        edulcore ni desvirtúe, donde es igualmente importante el mensaje ético. Para Goya la pintura es
+                        un vehículo de instrucción moral, no un simple objeto estético.​ Sus referentes más
+                        contemporáneos fueron Giambattista Tiepolo y Anton Raphael Mengs, aunque también recibió la
+                        influencia de Diego Velázquez y Rembrandt.​ </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="swiper-pagination swiper-pagination--horizontal"></div> -->
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-container mySwiperHorizontal">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="container container--background"
+                  style="background-image: url('./src/assets/imgs/mirror_room_26.png');">
+                  <div class="cover-page">
+                    <div class="cover-page_caption">
+                      <h3 class="cover-page_caption_subtitle">COLECCIÓN RESERVADA</h3>
+                      <h2 class="cover-page_caption_title">ARTE DE SANTANDER</h2>
+                      <span class="cover-page_caption_description">Grandes y nuevos maestros</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide--animation">
+                <div class="background_wrapper background_wrapper3" id="background_wrapper3">
+                  <div class="background_inner">
+                    <div class="container container--background" id="doBackgroundFull3" onclick="doBackgroundFull('3')"
+                      style="background-image: url('./src/assets/imgs/mirror_room_26.png');">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="content-page content-page3" id="content-page3" style="display: none;">
+                  <div
+                    class="content-page_background content-page_background--overlay content-page_background--animation"
+                    style="background-image: url('./src/assets/imgs/mirror_room_26.png');background-position-x: center;">
+                  </div>
+                  <div class="content-page_container">
+                    <div class="content-page_inner content-page_inner--alignVCenter">
+                      <p><strong class="emphasized">La maja desnuda</strong><br>
+                        Francisco de Goya<br>
+                        Óleo sobre lienzo<br>
+                        98cm x 191cm <br>1800 y Siglo XVIII</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content-page">
+                  <div class="content-page_container">
+                    <div class="content-page_inner">
+                      <h2 class="heading-title">ARTE DE SANTANDER<br> Su obra, su<br> legado</h2>
+                      <p>fue un pintor y grabador español. Su obra abarca la pintura de caballete y mural, el grabado y
+                        el dibujo. Su estilo evolucionó desde el rococó, pasando por el neoclasicismo, hasta el
+                        prerromanticismo, siempre interpretados de una forma personal y original,​ y siempre con un
+                        rasgo subyacente de naturalismo, del reflejo de la realidad sin una visión idealista que la
+                        edulcore ni desvirtúe, donde es igualmente importante el mensaje ético. Para Goya la pintura es
+                        un vehículo de instrucción moral, no un simple objeto estético.​ Sus referentes más
+                        contemporáneos fueron Giambattista Tiepolo y Anton Raphael Mengs, aunque también recibió la
+                        influencia de Diego Velázquez y Rembrandt.​ </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="swiper-pagination swiper-pagination--horizontal"></div> -->
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-container mySwiperHorizontal">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="container container--background"
+                  style="background-image: url('./src/assets/imgs/Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).png');">
+                  <div class="cover-page">
+                    <div class="cover-page_caption">
+                      <h3 class="cover-page_caption_subtitle">COLECCIÓN RESERVADA</h3>
+                      <h2 class="cover-page_caption_title">ARTE DE SANTANDER</h2>
+                      <span class="cover-page_caption_description">Grandes y nuevos maestros</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide--animation">
+
+                <div class="background_wrapper background_wrapper4" id="background_wrapper4">
+                  <div class="background_inner">
+                    <div class="container container--background" id="doBackgroundFull4" onclick="doBackgroundFull('4')"
+                      style="background-image: url('./src/assets/imgs/Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).png');">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="content-page content-page4" id="content-page4" style="display: none;">
+                  <div
+                    class="content-page_background content-page_background--overlay content-page_background--animation"
+                    style="background-image: url('./src/assets/imgs/Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).png');background-position-x: center;">
+                  </div>
+                  <div class="content-page_container">
+                    <div class="content-page_inner content-page_inner--alignVCenter">
+                      <p><strong class="emphasized">La maja desnuda</strong><br>
+                        Francisco de Goya<br>
+                        Óleo sobre lienzo<br>
+                        98cm x 191cm <br>1800 y Siglo XVIII</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content-page">
+                  <div class="content-page_container">
+                    <div class="content-page_inner">
+                      <h2 class="heading-title">ARTE DE SANTANDER<br> Su obra, su<br> legado</h2>
+                      <p>fue un pintor y grabador español. Su obra abarca la pintura de caballete y mural, el grabado y
+                        el dibujo. Su estilo evolucionó desde el rococó, pasando por el neoclasicismo, hasta el
+                        prerromanticismo, siempre interpretados de una forma personal y original,​ y siempre con un
+                        rasgo subyacente de naturalismo, del reflejo de la realidad sin una visión idealista que la
+                        edulcore ni desvirtúe, donde es igualmente importante el mensaje ético. Para Goya la pintura es
+                        un vehículo de instrucción moral, no un simple objeto estético.​ Sus referentes más
+                        contemporáneos fueron Giambattista Tiepolo y Anton Raphael Mengs, aunque también recibió la
+                        influencia de Diego Velázquez y Rembrandt.​ </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="swiper-pagination swiper-pagination--horizontal"></div> -->
+          </div>
+        </div>
+      </div>
+      <!-- <div class="swiper-pagination swiper-pagination--vertical"></div> -->
     </div>
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </div>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiperVertical = new Swiper( ".mySwiperVertical", {
-            direction: "vertical",
-            spaceBetween: 50,
-            loop: true,
-            initialSlide: 3,
-        } );
+  <div class="ui-overlay"></div>
 
-        var swiperHorizontal = new Swiper(".mySwiperHorizontal", {
-            spaceBetween: 50,
-            loop: true,
-            on: {
-                slideChange: function () {
-                    handleAddAnimationBackground();
-                },
-            },
-        } );
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-        function handleAddAnimationBackground() {
-            const timeOutanimation = setTimeout(addAnimationBackground, 1000);
-            function addAnimationBackground() {
-                var elms = document.getElementsByClassName('swiper-slide--animation swiper-slide-active');
-                if (elms.length) {
-                    for (let index = 0; index < elms.length; index++) {
-                        const element = elms[index];
-                        element.children[0].children[0].classList.add("background_inner-animation");
-                    }
-                }
-                clearTimeout(timeOutanimation);
-            }
+  <!-- Initialize Swiper -->
+  <script>
+    var swiperVertical = new Swiper( ".mySwiperVertical", {
+      direction: "vertical",
+      // spaceBetween: 50,
+      loop: true,
+      // initialSlide: 0,
+    } );
+
+    var swiperHorizontal = new Swiper( ".mySwiperHorizontal", {
+      // spaceBetween: 50,
+      loop: true,
+      // initialSlide: 0,
+      on: {
+        slideChange: function ()
+        {
+          handleAddAnimationBackground();
+        },
+      },
+    } );
+
+    // init room
+    swiperVertical.slideTo( 0 );
+
+    function handleAddAnimationBackground ()
+    {
+      const timeOutanimation = setTimeout( addAnimationBackground, 1000 );
+      function addAnimationBackground ()
+      {
+        var elms = document.getElementsByClassName( 'swiper-slide--animation swiper-slide-active' );
+        if ( elms.length )
+        {
+          for ( let index = 0; index < elms.length; index++ )
+          {
+            const element = elms[ index ];
+            element.children[ 0 ].children[ 0 ].classList.add( "background_inner-animation" );
+          }
         }
+        clearTimeout( timeOutanimation );
+      }
+    }
 
-        function doBackgroundFull(elm) {
-            // var docElm = document.getElementById('doBackgroundFull'+ elm);
-            var contentPageElm = document.getElementsByClassName('content-page'+ elm);
-            var backgroundWrapperElm = document.getElementsByClassName('background_wrapper'+ elm);
-            for (let index = 0; index < contentPageElm.length; index++) {
-                const elm1 = contentPageElm[index];
-                const elm2 = backgroundWrapperElm[index];
-                elm1.style.display = "block";
-                elm2.style.display = "none";
-            }
+    function doBackgroundFull ( elm )
+    {
+      var contentPageElm = document.getElementsByClassName( 'content-page' + elm );
+      var backgroundWrapperElm = document.getElementsByClassName( 'background_wrapper' + elm );
+      for ( let index = 0; index < contentPageElm.length; index++ )
+      {
+        const elm1 = contentPageElm[ index ];
+        const elm2 = backgroundWrapperElm[ index ];
+        elm1.style.display = "block";
+        elm2.style.display = "none";
+      }
+    }
+
+
+    var ignoreClickOnMeElement = document.getElementById( 'openMenu' );
+    document.addEventListener( 'click', function ( event )
+    {
+      var isClickInsideElement = ignoreClickOnMeElement.contains( event.target );
+      if ( !isClickInsideElement )
+      {
+        var body = document.body;
+        body.classList.remove( "header--opened" );
+      }
+    } );
+
+    function openMenu ()
+    {
+      var body = document.body;
+      if ( body.classList.contains( 'header--opened' ) )
+      {
+        body.classList.remove( "header--opened" );
+      } else
+      {
+        body.classList.add( "header--opened" );
+      }
+    }
+
+    function goToRoom ( room )
+    {
+      swiperVertical.slideTo( room );
+      var links = document.getElementsByClassName( 'header-submenu_link' );
+      if ( links.length )
+      {
+        for ( let index = 0; index < links.length; index++ )
+        {
+          var link = links[ index ];
+          link.classList.remove( "active" );
         }
-    </script>
+      }
+      var linkSelected = document.getElementById( 'header-submenu_link' + room );
+      linkSelected.classList.add( "active" );
+    }
+  </script>
 </body>
 
 </html>

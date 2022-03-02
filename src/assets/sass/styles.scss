@@ -268,6 +268,24 @@ input {
 }
 
 $header-height: 72px;
+
+.header--opened {
+	.header {
+		> ul > li {
+			.header-submenu {
+				opacity: 1;
+				top: 90%;
+			}
+			& > a {
+				text-align: center;
+			}
+		}
+	}
+	.ui-overlay {
+		opacity: 1;
+		z-index: 1;
+	}
+}
 .header {
 	position: fixed;
 	left: 0;
@@ -278,21 +296,7 @@ $header-height: 72px;
 	width: 100%;
 	> ul > li {
 		position: relative;
-		&:hover {
-			& + li {
-				&::before {
-					content: '';
-					@include overlay-style;
-					opacity: 1;
-				}
-			}
-			.header-submenu {
-				opacity: 1;
-				top: 90%;
-			}
-		}
 		& > a {
-			text-align: center;
 			img {				
 				height: calculateRem(50px);
 				object-fit: contain;
@@ -302,7 +306,7 @@ $header-height: 72px;
 }
 
 .header-submenu {
-	position: absolute;
+	// position: absolute;
 	left: 0;
 	top: 91%;
 	width: 100%;
@@ -316,6 +320,9 @@ $header-height: 72px;
     text-transform: uppercase;
     padding: calculateRem(12px) calculateRem(10px);
     display: inline-block;
+		&.active {
+			border-bottom: 1px solid #fff;
+		}
 	}
 }
 

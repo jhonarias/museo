@@ -26,7 +26,7 @@
         <header class="header">
             <ul>
                 <li>
-                    <a href="javascript:void">
+                    <a href="javascript:void(0)" onclick="doOpenMenu()">
                       <h1 class="header-logo">
                           <span class="header-page_title">ARTSANCO</span>
                           <img src="./src/assets/imgs/logo.svg" alt="ARTSANCO">
@@ -34,7 +34,7 @@
                     </a>
                     <ul class="header-submenu">
                       <li>
-                        <a href="./obra.html">Sala 1</a>
+                        <a href="./obra.html" class="active">Sala 1</a>
                       </li>
                       <li>
                         <a href="">Sala 2</a>
@@ -52,6 +52,17 @@
         </header>
         <div class="container container--background container--background_center-v" style="background-image: url('./src/assets/imgs/sala3.png');"></div>
     </div>
+    <div class="ui-overlay"></div>
+    <script>
+      function doOpenMenu() {
+        var body = document.body;
+        if (body.classList.contains('header--opened')) {
+          body.classList.remove("header--opened");
+        } else {
+          body.classList.add("header--opened");
+        }
+      }
+    </script>
 </body>
 
 </html>
