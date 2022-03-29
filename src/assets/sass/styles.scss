@@ -211,7 +211,7 @@ button {
 }
 // headings
 h1, h2, h3, h4, h5, h6 {
-	font-family: $font-name;
+	font-family: $font-butler-name;
     margin-top: 0;
     margin-bottom: calculateRem(20px);
 }
@@ -445,6 +445,7 @@ $header-height: 72px;
 }
 .cover-page_caption_description {
 	@include font-size($f-size-sm);
+	font-family: $font-butler-name;
 }
 
 // content page
