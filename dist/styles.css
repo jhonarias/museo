@@ -734,6 +734,14 @@ input {
     z-index: 2;
     opacity: 1; }
 
+.content-page_background--overlay .image {
+  position: absolute;
+  left: 50%;
+  bottom: 1.25rem;
+  max-width: 35%;
+  transform: translateX(-50%);
+  z-index: 2; }
+
 .content-page_inner {
   flex: 1; }
   .content-page_inner .button--call-to-action {

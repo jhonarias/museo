@@ -472,6 +472,15 @@ $header-height: 72px;
 		z-index: 2;
 		opacity: 1;
 	}
+	.image {
+		position: absolute;
+    left: 50%;
+    bottom: calculateRem(20px);
+    max-width: 35%;
+    transform: translateX(-50%);
+    z-index: 2;
+	}
+
 }
 .content-page_inner {
 	flex: 1;
