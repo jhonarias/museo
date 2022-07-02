@@ -286,20 +286,41 @@ input {
 	height: 100%;
 	transition: margin 700ms;
 }
-
+// 
+@keyframes header-icon-rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(90deg);
+	}
+}
+@keyframes header-icon-norotation {
+	from {
+		transform: rotate(90deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
 $header-height: 72px;
 .header--opened {
 	.header {
 		> ul > li {
 			.header-submenu {
-				opacity: 1;
+				display: inline-block;
 				top: 90%;
 			}
 			& > a {
-				left: 50%;
-				transform: translateX(-50%);
-				animation: .5s ease-out 0s 1 slideInFromLeftToCenter;
+				.header-logo_icon {
+					animation: header-icon-rotation .5s 1;
+					transform: rotate(90deg);
+				}
 			}
+		}
+
+		.header-image_bottom {
+			display: block;
 		}
 	}
 	.ui-overlay {
@@ -311,7 +332,8 @@ $header-height: 72px;
 	.header {
 		> ul > li {
 			& > a {
-				animation: slideInFromCenterToLeft 0.5s forwards;
+				animation: header-icon-norotation .5s 1;
+				transform:rotate(0deg);
 			}
 		}
 	}
@@ -326,10 +348,12 @@ $header-height: 72px;
 	width: 100%;
 	> ul > li {
 		position: relative;
+		text-align: center;
 		& > a {
-			display: inline-block;
-			position: relative;
-			width: calculateRem(200px);		
+			display: block;
+			width: calculateRem(40px);
+			margin: calculateRem(20px);
+			opacity: 1;
 			img {				
 				height: calculateRem(50px);
 			}
@@ -338,12 +362,10 @@ $header-height: 72px;
 }
 
 .header-submenu {
-	// position: absolute;
+	display: none;
 	left: 0;
 	top: 91%;
-	width: 100%;
 	max-height: 70vh;
-	opacity: 0;
 	overflow-y: auto;
 	text-align: center;
 	transition: top .9s ease, opacity .1s ease;
@@ -360,12 +382,43 @@ $header-height: 72px;
 
 .header-logo {
 	margin: 0;
-	padding: 0 calculateRem(14px);
-	line-height: 1;
 	img {
 		max-width: 100%;
     height: calculateRem($header-height);
     object-fit: contain;
+	}
+}
+
+.header-logo_icon {
+	display: inline-block;
+	width: calculateRem(40px);
+	height: calculateRem(30px);
+	position: relative;
+	z-index: 1;
+	border-top: calculateRem(3px) solid #fff;
+	border-bottom: calculateRem(3px) solid #fff;
+	&::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: #fff;
+    height: calculateRem(3px);
+    width: 100%;
+	}
+}
+
+.header-image_bottom {
+	display: none;
+	img {
+		position: fixed;
+		bottom: 0;
+		width: 100px;
+		z-index: 3;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 10px;
 	}
 }
 
@@ -454,6 +507,7 @@ $header-height: 72px;
 	padding-top: $header-height;
 	box-sizing: border-box;
 	position: relative;
+	overflow: hidden;
 }
 
 .content-page_container {
@@ -495,6 +549,7 @@ $header-height: 72px;
 	margin: auto 0;
 }
 .content-page_background {
+	transform: scale(1.3);
 	background-size: cover;
 	background-repeat: no-repeat;
 	// background-position: center;
@@ -504,9 +559,19 @@ $header-height: 72px;
 	width: 100%;
 	height: 100%;
 	z-index: -1;
+	// animation: background-animation .5s 1;
+}
+@keyframes background-animation {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: rotate(1.6);
+	}
 }
 .content-page_background--animation {
-	animation: temblor .9s 1;
+	// animation: temblor .9s 1;
+	animation: background-animation .5s 1;
 }
 .heading-title {
 	line-height: 1;
@@ -520,4 +585,59 @@ $header-height: 72px;
 
 .swiper-slide p {
 	@include font-size($f-size-sm);
+}
+
+.background-zoom {
+	@include font-size(30px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: calculateRem(10px);
+	top: 20%;
+	transform: translateY(-20%);
+	width: calculateRem(30px);
+	height: calculateRem(30px);
+	background: #fff;
+	color: #000;
+	line-height: 1;
+}
+
+.background-zoom-plus {
+	right: calculateRem(10px);
+	left: auto;
+}
+
+.move-backgrund {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	display: grid;
+	grid-template-columns: 3fr;
+	grid-template-rows: 3fr;
+	top: calculateRem(85px);
+}
+
+.background-move {
+	@include font-size(28px);
+}
+
+.background-move-up {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.background-move-down {
+	grid-column: 2;
+	grid-row: 3;
+}
+
+.background-move-left {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.background-move-right {
+	grid-column: 3;
+	grid-row: 2;
 }

@@ -28,13 +28,14 @@
     <header class="header">
       <ul>
         <li id="openMenu">
-          <a href="javascript:void(0)" onclick="openMenu();">
-            <h1 class="header-logo">
+          <a href="javascript:void(0)">
+            <h1 class="header-logo" id="header-logo" onclick="openMenu();">
               <span class="header-page_title">ARTSANCO</span>
-              <img src="./src/assets/imgs/logo.svg" alt="ARTSANCO">
+              <span class="header-logo_icon"></span>
+              <!-- <img src="./src/assets/imgs/logo.svg" alt="ARTSANCO"> -->
             </h1>
           </a>
-          <ul class="header-submenu">
+          <ul class="header-submenu" id="header-submenu">
             <li>
               <a href="javascript:void(0)" class="header-submenu_link active" id="header-submenu_link0"
                 onclick="goToRoom(0)">Sala 1</a>
@@ -53,7 +54,8 @@
             </li>
           </ul>
         </li>
-        <li class="header--call-overlay"></li>
+        <li class="header-image_bottom"><img src="./src/assets/imgs/logo-text.png" alt="" class="image"></li>
+        <!-- <li class="header--call-overlay"></li> -->
       </ul>
     </header>
     <!-- Swiper -->
@@ -91,8 +93,16 @@
                 <div class="content-page content-page1" id="content-page1" style="display: none;">
                   <div
                     class="content-page_background content-page_background--overlay content-page_background--animation"
-                    style="background-image: url('./src/assets/imgs/Maja_desnuda_(museo_del_Prado).png');background-position-x: center;">
-                    <img src="./src/assets/imgs/logo-text.png" alt="" class="image">
+                    style="background-image: url('./src/assets/imgs/Maja_desnuda_(museo_del_Prado).png');background-position-x: 1px; background-position-y: 1px;">
+                    <!-- <img src="./src/assets/imgs/logo-text.png" alt="" class="image"> -->
+                  </div>
+                  <button class="background-zoom background-zoom-minus" onclick="zoomMinus(event)">-</button>
+                  <button class="background-zoom background-zoom-plus" onclick="zoomPlus(event)">+</button>
+                  <div class="move-backgrund">
+                    <button class="background-move background-move-up" onclick="moveBackground(event, 'up')">🡹</button>
+                    <button class="background-move background-move-down" onclick="moveBackground(event, 'down')">🡻</button>
+                    <button class="background-move background-move-left" onclick="moveBackground(event, 'left')">🡸</button>
+                    <button class="background-move background-move-right" onclick="moveBackground(event, 'right')">🡺</button>
                   </div>
                   <div class="content-page_container">
                     <div class="content-page_inner content-page_inner--alignVCenter">
@@ -156,8 +166,16 @@
                 <div class="content-page content-page2" id="content-page2" style="display: none;">
                   <div
                     class="content-page_background content-page_background--overlay content-page_background--animation"
-                    style="background-image: url('./src/assets/imgs/mariohernandezprada.png');background-position-x: center;">
-                    <img src="./src/assets/imgs/logo-text.png" alt="" class="image">
+                    style="background-image: url('./src/assets/imgs/mariohernandezprada.png');background-position-x: 1px; background-position-y: 1px;">
+                    <!-- <img src="./src/assets/imgs/logo-text.png" alt="" class="image"> -->
+                  </div>
+                  <button class="background-zoom background-zoom-minus" onclick="zoomMinus(event)">-</button>
+                  <button class="background-zoom background-zoom-plus" onclick="zoomPlus(event)">+</button>
+                  <div class="move-backgrund">
+                    <button class="background-move background-move-up" onclick="moveBackground(event, 'up')">🡹</button>
+                    <button class="background-move background-move-down" onclick="moveBackground(event, 'down')">🡻</button>
+                    <button class="background-move background-move-left" onclick="moveBackground(event, 'left')">🡸</button>
+                    <button class="background-move background-move-right" onclick="moveBackground(event, 'right')">🡺</button>
                   </div>
                   <div class="content-page_container">
                     <div class="content-page_inner content-page_inner--alignVCenter">
@@ -218,8 +236,16 @@
                 <div class="content-page content-page3" id="content-page3" style="display: none;">
                   <div
                     class="content-page_background content-page_background--overlay content-page_background--animation"
-                    style="background-image: url('./src/assets/imgs/mirror_room_26.png');background-position-x: center;">
-                    <img src="./src/assets/imgs/logo-text.png" alt="" class="image">
+                    style="background-image: url('./src/assets/imgs/mirror_room_26.png');background-position-x: 1px; background-position-y: 1px;">
+                    <!-- <img src="./src/assets/imgs/logo-text.png" alt="" class="image"> -->
+                  </div>
+                  <button class="background-zoom background-zoom-minus" onclick="zoomMinus(event)">-</button>
+                  <button class="background-zoom background-zoom-plus" onclick="zoomPlus(event)">+</button>
+                  <div class="move-backgrund">
+                    <button class="background-move background-move-up" onclick="moveBackground(event, 'up')">🡹</button>
+                    <button class="background-move background-move-down" onclick="moveBackground(event, 'down')">🡻</button>
+                    <button class="background-move background-move-left" onclick="moveBackground(event, 'left')">🡸</button>
+                    <button class="background-move background-move-right" onclick="moveBackground(event, 'right')">🡺</button>
                   </div>
                   <div class="content-page_container">
                     <div class="content-page_inner content-page_inner--alignVCenter">
@@ -280,8 +306,16 @@
                 <div class="content-page content-page4" id="content-page4" style="display: none;">
                   <div
                     class="content-page_background content-page_background--overlay content-page_background--animation"
-                    style="background-image: url('./src/assets/imgs/Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).png');background-position-x: center;">
-                    <img src="./src/assets/imgs/logo-text.png" alt="" class="image">
+                    style="background-image: url('./src/assets/imgs/Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).png');background-position-x: 1px; background-position-y: 1px;">
+                    <!-- <img src="./src/assets/imgs/logo-text.png" alt="" class="image"> -->
+                  </div>
+                  <button class="background-zoom background-zoom-minus" onclick="zoomMinus(event)">-</button>
+                  <button class="background-zoom background-zoom-plus" onclick="zoomPlus(event)">+</button>
+                  <div class="move-backgrund">
+                    <button class="background-move background-move-up" onclick="moveBackground(event, 'up')">🡹</button>
+                    <button class="background-move background-move-down" onclick="moveBackground(event, 'down')">🡻</button>
+                    <button class="background-move background-move-left" onclick="moveBackground(event, 'left')">🡸</button>
+                    <button class="background-move background-move-right" onclick="moveBackground(event, 'right')">🡺</button>
                   </div>
                   <div class="content-page_container">
                     <div class="content-page_inner content-page_inner--alignVCenter">
@@ -381,11 +415,13 @@
     }
 
 
-    var ignoreClickOnMeElement = document.getElementById( 'openMenu' );
+    var ignoreClickOnMeElement = document.getElementById( 'header-logo' );
+    var ignoreClickOnMeHeaderSubmenuElement = document.getElementById( 'header-submenu' );
     document.addEventListener( 'click', function ( event )
     {
       var isClickInsideElement = ignoreClickOnMeElement.contains( event.target );
-      if ( !isClickInsideElement )
+      var isClickInsideSubmenuElement = ignoreClickOnMeHeaderSubmenuElement.contains( event.target );
+      if ( !isClickInsideElement && !isClickInsideSubmenuElement )
       {
         var body = document.body;
         body.classList.remove( "header--opened" );
@@ -420,6 +456,44 @@
       }
       var linkSelected = document.getElementById( 'header-submenu_link' + room );
       linkSelected.classList.add( "active" );
+    }
+
+    var scaleValue = 1.3;
+    var scaleAux = 0.1;
+    function zoomMinus(elm) {
+      console.log(elm.target);
+      scaleValue = scaleValue - scaleAux;
+      elm.target.parentElement.children[0].style.transform = 'scale('+scaleValue+')';
+    }
+
+    function zoomPlus(elm) {
+      console.log(elm);
+      scaleValue = scaleValue + scaleAux;
+      elm.target.parentElement.children[0].style.transform = 'scale('+scaleValue+')';
+    }
+
+    var positionx = 1;
+    var positiony = 1;
+    var positionAux = 20;
+    function moveBackground(elm, position) {
+      const getPositionX = elm.target.parentElement.parentElement.children[0].style.backgroundPositionX;
+      const getPositionY = elm.target.parentElement.parentElement.children[0].style.backgroundPositionY;
+      console.log(elm);
+      positionx = getPositionX ? +getPositionX.replace('px', '').replace('%', '') : positionx;
+      positiony = getPositionY ? +getPositionY.replace('px', '').replace('%', '') : positiony;
+      if (position == 'right') {
+        positionx = positionx + positionAux;
+      }
+      if (position == 'left') {
+        positionx = positionx - positionAux;
+      }
+      if (position == 'up') {
+        positiony = positiony - positionAux;
+      }
+      if (position == 'down') {
+        positiony = positiony + positionAux;
+      }
+      elm.target.parentElement.parentElement.children[0].style.backgroundPosition = ''+ positionx + 'px ' + positiony + 'px';
     }
   </script>
 </body>
