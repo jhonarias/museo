@@ -827,15 +827,16 @@ input {
 .swiper-slide p {
   font-size: 0.875rem; }
 
+.zoom-background {
+  position: absolute;
+  left: 1.5625rem;
+  bottom: 5%; }
+
 .background-zoom {
   font-size: 1.875rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  left: 0.625rem;
-  top: 20%;
-  transform: translateY(-20%);
   width: 1.875rem;
   height: 1.875rem;
   background: #fff;
@@ -848,15 +849,15 @@ input {
 
 .move-backgrund {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 1.5625rem;
   display: grid;
   grid-template-columns: 3fr;
   grid-template-rows: 3fr;
-  top: 5.3125rem; }
+  bottom: 5%; }
 
 .background-move {
-  font-size: 1.75rem; }
+  font-size: 1.75rem;
+  line-height: 1; }
 
 .background-move-up {
   grid-column: 2;

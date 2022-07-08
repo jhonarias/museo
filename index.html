@@ -96,8 +96,10 @@
                     style="background-image: url('./src/assets/imgs/Maja_desnuda_(museo_del_Prado).png');background-position-x: 1px; background-position-y: 1px;">
                     <!-- <img src="./src/assets/imgs/logo-text.png" alt="" class="image"> -->
                   </div>
-                  <button class="background-zoom background-zoom-minus" onclick="zoomMinus(event)">-</button>
-                  <button class="background-zoom background-zoom-plus" onclick="zoomPlus(event)">+</button>
+                  <div class="zoom-background">
+                    <button class="background-zoom background-zoom-plus" onclick="zoomPlus(event)">+</button>
+                    <button class="background-zoom background-zoom-minus" onclick="zoomMinus(event)">-</button>
+                  </div>
                   <div class="move-backgrund">
                     <button class="background-move background-move-up" onclick="moveBackground(event, 'up')">↑</button>
                     <button class="background-move background-move-down" onclick="moveBackground(event, 'down')">↓</button>
@@ -169,8 +171,10 @@
                     style="background-image: url('./src/assets/imgs/mariohernandezprada.png');background-position-x: 1px; background-position-y: 1px;">
                     <!-- <img src="./src/assets/imgs/logo-text.png" alt="" class="image"> -->
                   </div>
-                  <button class="background-zoom background-zoom-minus" onclick="zoomMinus(event)">-</button>
-                  <button class="background-zoom background-zoom-plus" onclick="zoomPlus(event)">+</button>
+                  <div class="zoom-background">
+                    <button class="background-zoom background-zoom-plus" onclick="zoomPlus(event)">+</button>
+                    <button class="background-zoom background-zoom-minus" onclick="zoomMinus(event)">-</button>
+                  </div>
                   <div class="move-backgrund">
                     <button class="background-move background-move-up" onclick="moveBackground(event, 'up')">↑</button>
                     <button class="background-move background-move-down" onclick="moveBackground(event, 'down')">↓</button>
@@ -239,8 +243,10 @@
                     style="background-image: url('./src/assets/imgs/mirror_room_26.png');background-position-x: 1px; background-position-y: 1px;">
                     <!-- <img src="./src/assets/imgs/logo-text.png" alt="" class="image"> -->
                   </div>
-                  <button class="background-zoom background-zoom-minus" onclick="zoomMinus(event)">-</button>
-                  <button class="background-zoom background-zoom-plus" onclick="zoomPlus(event)">+</button>
+                  <div class="zoom-background">
+                    <button class="background-zoom background-zoom-plus" onclick="zoomPlus(event)">+</button>
+                    <button class="background-zoom background-zoom-minus" onclick="zoomMinus(event)">-</button>
+                  </div>
                   <div class="move-backgrund">
                     <button class="background-move background-move-up" onclick="moveBackground(event, 'up')">↑</button>
                     <button class="background-move background-move-down" onclick="moveBackground(event, 'down')">↓</button>
@@ -309,8 +315,10 @@
                     style="background-image: url('./src/assets/imgs/Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).png');background-position-x: 1px; background-position-y: 1px;">
                     <!-- <img src="./src/assets/imgs/logo-text.png" alt="" class="image"> -->
                   </div>
-                  <button class="background-zoom background-zoom-minus" onclick="zoomMinus(event)">-</button>
-                  <button class="background-zoom background-zoom-plus" onclick="zoomPlus(event)">+</button>
+                  <div class="zoom-background">
+                    <button class="background-zoom background-zoom-plus" onclick="zoomPlus(event)">+</button>
+                    <button class="background-zoom background-zoom-minus" onclick="zoomMinus(event)">-</button>
+                  </div>
                   <div class="move-backgrund">
                     <button class="background-move background-move-up" onclick="moveBackground(event, 'up')">↑</button>
                     <button class="background-move background-move-down" onclick="moveBackground(event, 'down')">↓</button>
@@ -461,15 +469,13 @@
     var scaleValue = 1.3;
     var scaleAux = 0.1;
     function zoomMinus(elm) {
-      console.log(elm.target);
       scaleValue = scaleValue - scaleAux;
-      elm.target.parentElement.children[0].style.transform = 'scale('+scaleValue+')';
+      elm.target.parentElement.parentElement.children[0].style.transform = 'scale('+scaleValue+')';
     }
 
     function zoomPlus(elm) {
-      console.log(elm);
       scaleValue = scaleValue + scaleAux;
-      elm.target.parentElement.children[0].style.transform = 'scale('+scaleValue+')';
+      elm.target.parentElement.parentElement.children[0].style.transform = 'scale('+scaleValue+')';
     }
 
     var positionx = 1;
@@ -478,7 +484,6 @@
     function moveBackground(elm, position) {
       const getPositionX = elm.target.parentElement.parentElement.children[0].style.backgroundPositionX;
       const getPositionY = elm.target.parentElement.parentElement.children[0].style.backgroundPositionY;
-      console.log(elm);
       positionx = getPositionX ? +getPositionX.replace('px', '').replace('%', '') : positionx;
       positiony = getPositionY ? +getPositionY.replace('px', '').replace('%', '') : positiony;
       if (position == 'right') {

@@ -586,16 +586,16 @@ $header-height: 72px;
 .swiper-slide p {
 	@include font-size($f-size-sm);
 }
-
+.zoom-background {
+	position: absolute;
+	left: calculateRem(25px);
+	bottom: 5%;
+}
 .background-zoom {
 	@include font-size(30px);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	position: absolute;
-	left: calculateRem(10px);
-	top: 20%;
-	transform: translateY(-20%);
 	width: calculateRem(30px);
 	height: calculateRem(30px);
 	background: #fff;
@@ -610,16 +610,16 @@ $header-height: 72px;
 
 .move-backgrund {
 	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
+	right: calculateRem(25px);
 	display: grid;
 	grid-template-columns: 3fr;
 	grid-template-rows: 3fr;
-	top: calculateRem(85px);
+	bottom: 5%;
 }
 
 .background-move {
 	@include font-size(28px);
+	line-height: 1;
 }
 
 .background-move-up {
