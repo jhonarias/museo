@@ -641,3 +641,25 @@ $header-height: 72px;
 	grid-column: 3;
 	grid-row: 2;
 }
+
+.show-info {
+	position: absolute;
+	bottom: 17%;
+	left: calculateRem(25px);
+}
+
+.show-info_button {
+	@include font-size(22px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $c-color1;
+	border-radius: 50%;
+	width: calculateRem(35px);
+	height: calculateRem(35px);
+	color: $c-color4;
+	.button_text {
+		line-height: 1;
+		margin-bottom: 5px;
+	}
+}
