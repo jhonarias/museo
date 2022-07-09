@@ -13,3 +13,29 @@
 .text-center {
 	text-align: center;
 }
+
+// fonts
+.font-default-name {
+	font-family: $font-name;
+}
+.font-butler-name {
+	font-family: $font-butler-name;
+}
+
+.font-montserrat-regular-name {
+	font-family: $font-montserrat-regular-name;
+}
+
+// font weights
+.f-weight-bold {
+	font-weight: $f-weight-bold;
+}
+.f-weight-medium {
+	font-family: $f-weight-medium;
+}
+.f-weight-normal {
+	font-family: $f-weight-normal;
+}
+.f-weight-light {
+	font-family: $f-weight-light;
+}

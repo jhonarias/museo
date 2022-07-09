@@ -239,7 +239,7 @@ a {
 }
 
 strong {
-	font-weight: 600;
+	font-weight: $f-weight-medium;
 }
 
 p {
@@ -495,10 +495,16 @@ $header-height: 72px;
 .cover-page_caption_title {
 	@include font-size($f-size-xlgx);
 	line-height: 1.2;
+	font-weight: $f-weight-medium;
 }
+.cover-page_caption_subtitle {
+	font-family: $font-name;
+}
+
 .cover-page_caption_description {
 	@include font-size($f-size-sm);
 	font-family: $font-butler-name;
+	font-weight: $f-weight-medium;
 }
 
 // content page

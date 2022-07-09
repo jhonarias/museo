@@ -340,8 +340,7 @@
                     <!-- <img src="./src/assets/imgs/logo-text.png" alt="" class="image"> -->
                   </div>
                   <div class="show-info">
-                    <button class="show-info_button" onclick="showInfo(event)"
-                      title="Ver más información">
+                    <button class="show-info_button" onclick="showInfo(event)">
                       <span class="button_text">
                         ¡
                       </span>
@@ -541,7 +540,10 @@
 
     function showInfo(elm) {
       elm.target.parentElement.parentElement.parentElement.children[0].classList.add('content-page_background--overlay');
-      elm.target.parentElement.parentElement.parentElement.children[4].style.display = 'flex';
+      if (elm.target.parentElement.parentElement.parentElement.children.length &&
+        elm.target.parentElement.parentElement.parentElement.children[4]) {
+        elm.target.parentElement.parentElement.parentElement.children[4].style.display = 'flex';
+      }
     }
   </script>
 </body>
