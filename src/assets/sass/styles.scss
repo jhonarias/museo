@@ -427,12 +427,53 @@ $header-height: 72px;
 }
 
 // images
-.image_container--vc-img-original {
+.image_container--default {
 	height: 100%;
 	width: 100%;
 	display: flex;
-	.image {
-		margin: auto 0;
+	overflow: hidden;
+	&.image_container--default--overlay {
+		&::before {
+			content: '';
+			@include overlay-style();
+			z-index: 2;
+			opacity: 1;
+		}
+	}
+	.image_container--default_caption {
+		position: absolute;
+    padding: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+	}
+	// .image {
+	// 	margin: auto 0;
+	// }
+}
+.button-top_action {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 14px;
+	z-index: 3;
+	width: 50px;
+	box-sizing: content-box;
+	.button_text {
+		&::before,
+		&::after {
+			content: '';
+			height: 50px;
+			width: 1px;
+			background: #fff;
+			display: inline-block;
+		}
+		&::before {
+			transform: rotate(45deg);
+		}
+		&::after {
+			transform: rotate(135deg);
+		}
 	}
 }
 .image {

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site Description">
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="./src/assets/imgs/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/assets/imgs/favicon/favicon-16x16.png"> -->
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Generator fonts -->
+  <!-- https://blogfonts.com/helvetica-neue-lt-std-1.font -->
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <link rel="stylesheet" href="./dist/styles.css">
+  <!-- <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&amp;subset=latin-ext&amp;display=swap"
+        rel="stylesheet"> -->
+
+  <title>Artsanco</title>
+</head>
+
+<body class="home-page">
+  <div class="page-wrap">
+    <button class="button-top_action" onclick="closeDetail(event)">
+      <span class="button_text"></span>
+    </button>
+    <div class="image_container image_container--default" onclick="openDetail(event)">
+      <img src="./src/assets/imgs/Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).png" alt="">
+      <div class="image_container--default_caption" style="display: none;">
+        <p><strong class="emphasized">La maja desnuda</strong><br>
+          Francisco de Goya<br>
+          Óleo sobre lienzo<br>
+          98cm x 191cm <br>1800 y Siglo XVIII</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Initialize Swiper -->
+  <script>
+    function openDetail(elm) {
+      elm.currentTarget.classList.add('image_container--default--overlay');
+      elm.currentTarget.children[1].style.display = 'block';
+    }
+
+    function closeDetail(elm) {
+      elm.currentTarget.nextElementSibling.classList.remove('image_container--default--overlay');
+      elm.currentTarget.nextElementSibling.children[1].style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>

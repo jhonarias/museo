@@ -78,10 +78,6 @@
               </div>
               <!-- Es necesario esta clase swiper-slide--animation para la animación de la imagen -->
               <div class="swiper-slide swiper-slide--animation">
-                <!--<div class="image_container image_container--vc-img-original">
-                                    <img src="./src/assets/imgs/Maja_desnuda_(museo_del_Prado).png" alt="" class="image">
-                                </div>-->
-
                 <div class="background_wrapper background_wrapper1" id="background_wrapper1">
                   <div class="background_inner">
                     <div class="container container--background" id="doBackgroundFull1" onclick="doBackgroundFull('1')"
@@ -94,7 +90,6 @@
                   <div
                     class="content-page_background content-page_background--overlay content-page_background--animation"
                     style="background-image: url('./src/assets/imgs/Maja_desnuda_(museo_del_Prado).png');background-position-x: 1px; background-position-y: 1px;">
-                    <!-- <img src="./src/assets/imgs/logo-text.png" alt="" class="image"> -->
                   </div>
                   <div class="show-info">
                     <button class="show-info_button" onclick="showInfo(event)"
@@ -165,6 +160,19 @@
               </div>
               <div class="swiper-slide swiper-slide--animation">
 
+                <!-- <button class="button-top_action" onclick="closeDetail(event)">
+                  <span class="button_text"></span>
+                </button>
+                <div class="image_container image_container--default" onclick="openDetail(event)">
+                  <img src="./src/assets/imgs/mariohernandezprada.png" alt="">
+                  <div class="image_container--default_caption" style="display: none;">
+                    <p><strong class="emphasized">La maja desnuda</strong><br>
+                      Francisco de Goya<br>
+                      Óleo sobre lienzo<br>
+                      98cm x 191cm <br>1800 y Siglo XVIII</p>
+                  </div>
+                </div> -->
+
                 <div class="background_wrapper background_wrapper2" id="background_wrapper2">
                   <div class="background_inner">
                     <div class="container container--background" id="doBackgroundFull2" onclick="doBackgroundFull('2')"
@@ -177,7 +185,6 @@
                   <div
                     class="content-page_background content-page_background--overlay content-page_background--animation"
                     style="background-image: url('./src/assets/imgs/mariohernandezprada.png');background-position-x: 1px; background-position-y: 1px;">
-                    <!-- <img src="./src/assets/imgs/logo-text.png" alt="" class="image"> -->
                   </div>
                   <div class="show-info">
                     <button class="show-info_button" onclick="showInfo(event)"
@@ -257,7 +264,6 @@
                   <div
                     class="content-page_background content-page_background--overlay content-page_background--animation"
                     style="background-image: url('./src/assets/imgs/mirror_room_26.png');background-position-x: 1px; background-position-y: 1px;">
-                    <!-- <img src="./src/assets/imgs/logo-text.png" alt="" class="image"> -->
                   </div>
                   <div class="show-info">
                     <button class="show-info_button" onclick="showInfo(event)"
@@ -324,7 +330,6 @@
                 </div>
               </div>
               <div class="swiper-slide swiper-slide--animation">
-
                 <div class="background_wrapper background_wrapper4" id="background_wrapper4">
                   <div class="background_inner">
                     <div class="container container--background" id="doBackgroundFull4" onclick="doBackgroundFull('4')"
@@ -337,7 +342,6 @@
                   <div
                     class="content-page_background content-page_background--overlay content-page_background--animation"
                     style="background-image: url('./src/assets/imgs/Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).png');background-position-x: 1px; background-position-y: 1px;">
-                    <!-- <img src="./src/assets/imgs/logo-text.png" alt="" class="image"> -->
                   </div>
                   <div class="show-info">
                     <button class="show-info_button" onclick="showInfo(event)">
@@ -544,6 +548,16 @@
         elm.target.parentElement.parentElement.parentElement.children[4]) {
         elm.target.parentElement.parentElement.parentElement.children[4].style.display = 'flex';
       }
+    }
+
+    function openDetail(elm) {
+      elm.currentTarget.classList.add('image_container--default--overlay');
+      elm.currentTarget.children[1].style.display = 'block';
+    }
+
+    function closeDetail(elm) {
+      elm.currentTarget.nextElementSibling.classList.remove('image_container--default--overlay');
+      elm.currentTarget.nextElementSibling.children[1].style.display = 'none';
     }
   </script>
 </body>
